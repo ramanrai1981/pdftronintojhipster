@@ -1,0 +1,35 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "mobile",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fileloghistory",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "file",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "locationcurrent",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "locationtarget",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170123104219",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "cfms",
+    "pagination": "pagination"
+}

@@ -1,0 +1,86 @@
+<div ng-cloak>
+    <!--
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div><a href="/WebViewer/pdftronsample.html">WebViewer Tool <span class="badge">1</span></a></div>
+            <div><a href="/pdftron/pdftronsample.html">PDFTRON Tool<span class="badge">2</span></a></div>
+            <div><a href="/pdftron/index1.html">Kanirgarn Richi Pdf Book <span class="badge">3</span></a></div>
+
+            <button class="btn btn-primary" type="button">
+                Click Here<span class="badge">to open</span>
+            </button>
+        </div>
+    </div>
+    -->
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <a href="#/fms">
+                <button class="btn btn-primary" type="button">
+                    Upload A File<span class="badge">to upload</span>
+                </button>
+            </a>
+            <!--  directed to entity -->
+            <!--   <a href="#/cfms">
+                  <button class="btn btn-primary" type="button">
+                      Click Here<span class="badge">to open</span>
+                  </button>
+              </a> -->
+              <a href="#/signature">
+                  <button type="button" class="btn btn-primary">
+                      Sign A Document<span class="badge">to sign</span>
+                  </button>
+              </a>
+              <a href="#/send">
+                  <button type="button" class="btn btn-primary">
+                      Send A Document<span class="badge">to send</span>
+                  </button>
+              </a>
+
+
+              <div class="panel-heading"></div>
+                  <div class="panel-body">
+
+                  <!-- Standard Form -->
+
+                <form action="#" method="post" enctype="multipart/form-data" id="js-upload-form">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <input type="file" name="files[]" id="js-upload-files" multiple>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">UPLOAD A FILE
+                        </button>
+                        <button type="submit" class="btn btn-sm btn-primary" id="js-upload-from-cloud">GET FROM
+                            CLOUD
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Upload Finished -->
+                <div class="js-upload-finished">
+                    <h3>Processed files</h3>
+                    <div class="list-group">
+                        <a href="/pdftron/pdftronsample.html" class="list-group-item list-group-item-success"><span
+                            class="badge alert-success pull-right">Success</span>PDFTRON Tool</a>
+                        <a href="/pdftron/editpdftronsample.html" class="list-group-item list-group-item-success"><span
+                            class="badge alert-success pull-right">Success</span>Edit Pdftron Sample Getting Started
+                            page</a>
+                        <a href="/pdftron/index1.html" class="list-group-item list-group-item-success"><span
+                            class="badge alert-success pull-right">Success</span>Kanirgarn Richi Pdf Book</a>
+                        <a href="/pdftron/editkernighan_ritchie.html"
+                           class="list-group-item list-group-item-success"><span
+                            class="badge alert-success pull-right">Success</span>Edit Kanirgan Richi</a>
+                        <a href="pdftron/docker.html" class="list-group-item list-group-item-success"><span
+                            class="badge alert-success pull-right">Success</span>Docker</a>
+                        <a href="WebViewer/index.html" class="list-group-item list-group-item-success"><span
+                            class="badge alert-success pull-right">Success</span>Web Viewer</a>
+                        <a href="#" class="list-group-item list-group-item-success"><span
+                            class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- ng-cloak -->
+</div>
+

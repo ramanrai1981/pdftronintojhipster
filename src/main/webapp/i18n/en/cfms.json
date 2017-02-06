@@ -1,0 +1,28 @@
+{
+    "foodnetApp": {
+        "cfms" : {
+            "home": {
+                "title": "Cfms",
+                "createLabel": "Create a new Cfms",
+                "createOrEditLabel": "Create or edit a Cfms",
+                "sendAFile": "Send a new File",
+                "search": "Search for Cfms"
+            },
+            "created": "A new Cfms is created with identifier {{ param }}",
+            "updated": "A Cfms is updated with identifier {{ param }}",
+            "deleted": "A Cfms is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cfms {{ id }}?"
+            },
+            "detail": {
+                "title": "Cfms"
+            },
+            "mobile": "Mobile",
+            "name": "Name",
+            "fileloghistory": "Fileloghistory",
+            "file": "File",
+            "locationcurrent": "Locationcurrent",
+            "locationtarget": "Locationtarget"
+        }
+    }
+}

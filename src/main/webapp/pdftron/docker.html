@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>
+    </title>
+
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="lib/WebViewer.js"></script>
+
+    <style>
+#viewer{
+width: 1024px;
+height: 600px;
+}
+</style>
+
+    <script>
+        $(function() {
+        var viewerElement = document.getElementById("viewer");
+        var myWebViewer = new PDFTron.WebViewer({
+        path: "lib",
+        type: "html5",
+        initialDoc: "forms_summary.xlsx",
+        streaming: true
+        }, viewerElement);
+    });
+
+        var myWebViewer = new PDFTron.WebViewer({
+        path: "lib",
+        type: "html5",
+        l: "Your License Key Here",
+        documentType: "xod",
+        initialDoc: "forms_summary.xod",
+        streaming: false
+        }, viewerElement);
+        });
+    </script>
+</head>
+
+<body>
+<div id="viewer"></div>
+</body>
+</html>

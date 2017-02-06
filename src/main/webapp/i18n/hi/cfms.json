@@ -1,0 +1,29 @@
+{
+    "foodnetApp": {
+        "cfms" : {
+            "home": {
+                "title": "Cfms",
+                "createLabel": "नया Cfms बनाएँ",
+                "createOrEditLabel": "Cfms बनाएँ या संपादित करें",
+                "sendAFile": "नई फ़ाइल भेजना",
+
+                "search": "Cfms खोजें"
+            },
+            "created": "एक नया Cfms [identifier: {{ param }}] तैयार है",
+            "updated": "एक Cfms [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Cfms [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Cfms [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Cfms"
+            },
+            "mobile": "Mobile",
+            "name": "Name",
+            "fileloghistory": "Fileloghistory",
+            "file": "File",
+            "locationcurrent": "Locationcurrent",
+            "locationtarget": "Locationtarget"
+        }
+    }
+}

@@ -1,0 +1,87 @@
+<div ng-cloak>
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <a href="#/fms">
+                <button class="btn btn-primary" type="button">
+                    Upload A File<span class="badge">to upload</span>
+                </button>
+            </a>
+            <!--  directed to entity -->
+            <!-- <a href="#/cfms">
+                 <button class="btn btn-primary" type="button">
+                     Click Here<span class="badge">to open</span>
+                 </button>
+             </a> -->
+             <a href="#/signature">
+                 <button type="button" class="btn btn-primary">
+                     Sign A Document<span class="badge">to sign</span>
+                 </button>
+             </a>
+
+             <a href="#/send">
+                 <button type="button" class="btn btn-primary">
+                     Send A Document<span class="badge">to send</span>
+                 </button>
+             </a>
+
+             <div class="panel-heading"></div>
+                     <div class="panel-body">
+                         <!-- Standard Form -->
+                        <div class="js-upload-finished">
+                            <form action="#" method="post" enctype="multipart/form-data" id="js-upload-form">
+                                <div class="form-inline">
+
+                                    <div class="alert alert-info" role="alert">
+                                        <span class="badge">Documents for Signature</span>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="file" name="files[]" id="js-upload-files" multiple>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">UPLOAD A
+                                        FILE
+                                    </button>
+                                    <button type="submit" class="btn btn-sm btn-primary" id="js-upload-from-cloud">GET
+                                        FROM
+                                        CLOUD
+                                    </button>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <div class="alert alert-info" role="alert">
+                                        <span class="badge">Recipients and Signature</span>
+                                    </div>
+
+
+                                    <!-- angular email -->
+                                    <div>
+                                    <input type="email" ng-model="emailid" ng-name="recipientEmail" placeholder="Recipient Email">
+                                    </div><br>
+                                    <!-- bootstrap email
+                                            <input type="email" class="form-control" id="email" placeholder="Email">
+                                    -->
+                                    <div>
+                                        <input type="text" ng-model="recipient" ng-name="recipientName" placeholder="Recipient Name">
+                                    </div><br>
+<div>
+    <button type="button" class="btn btn-primary">Add Signer</button>
+    <button type="button" class="btn btn-defualt">Add CC</button>
+</div><br>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Panel -->
+            </div>
+
+            <!-- /container -->
+        </div>
+        <!-- ng-cloak -->
+    </div>
+
+</div>
+
+

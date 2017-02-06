@@ -1,0 +1,92 @@
+<div>
+    <h2 data-translate="foodnetApp.cfms.home.title">Cfms</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="cfms.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                <!-- <span class="hidden-xs"  data-translate="foodnetApp.cfms.home.createLabel">
+                        Create new Cfms
+                    </span> -->
+
+                    <span class="hidden-xs"  data-translate="foodnetApp.cfms.home.sendAFile">
+                        Send A New File
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'foodnetApp.cfms.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="mobile"><span data-translate="foodnetApp.cfms.mobile">Mobile</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span data-translate="foodnetApp.cfms.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fileloghistory"><span data-translate="foodnetApp.cfms.fileloghistory">Fileloghistory</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="file"><span data-translate="foodnetApp.cfms.file">File</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="locationcurrent"><span data-translate="foodnetApp.cfms.locationcurrent">Locationcurrent</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="locationtarget"><span data-translate="foodnetApp.cfms.locationtarget">Locationtarget</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cfms in vm.cfms track by cfms.id">
+                    <td><a ui-sref="cfms-detail({id:cfms.id})">{{cfms.id}}</a></td>
+                    <td>{{cfms.mobile}}</td>
+                    <td>{{cfms.name}}</td>
+                    <td>{{cfms.fileloghistory}}</td>
+                    <td>{{cfms.file}}</td>
+                    <td>{{cfms.locationcurrent}}</td>
+                    <td>{{cfms.locationtarget}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="cfms-detail({id:cfms.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cfms.edit({id:cfms.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cfms.delete({id:cfms.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+version: '2'
+services:
+    foodnet-cassandra:
+        container_name: foodnet-cassandra
+        image: cassandra:3.9
+        # volumes:
+        #     - ~/volumes/jhipster/foodnet/cassandra/:/var/lib/cassandra/data
+        ports:
+            - 7000:7000
+            - 7001:7001
+            - 7199:7199
+            - 9042:9042
+            - 9160:9160
+    foodnet-cassandra-node:
+        image: cassandra:3.9
+        links:
+            - foodnet-cassandra:seed
+        environment:
+            - CASSANDRA_SEEDS=seed
+    foodnet-cassandra-migration:
+        extends:
+            file: cassandra-migration.yml
+            service: foodnet-cassandra-migration
+        links:
+            - foodnet-cassandra
+        environment:
+            - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql

@@ -1,0 +1,41 @@
+#-------------------------------------------------------------------------------
+# Note for using the rate-limiting:
+#   The comment part won't be copied if you use the subgenerator docker-compose
+#   you have to manually copy it
+#-------------------------------------------------------------------------------
+version: '2'
+services:
+    foodnet-app:
+        image: foodnet
+        external_links:
+            - foodnet-mysql:mysql
+            # Uncomment to have Cassandra working with the gateway
+            # - foodnet-cassandra:cassandra
+            - foodnet-elasticsearch:elasticsearch
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/foodnet?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - SPRING_DATA_CASSANDRA_CONTACTPOINTS=cassandra
+            - JHIPSTER_SLEEP=30 # gives time for the Cassandra cluster to start and execute the migration scripts
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=elasticsearch:9300
+        ports:
+            - 8081:8081
+    foodnet-mysql:
+        extends:
+            file: mysql.yml
+            service: foodnet-mysql
+    # Uncomment to have Cassandra working with the gateway
+    # foodnet-cassandra:
+    #     extends:
+    #         file: cassandra-cluster.yml
+    #         service: foodnet-cassandra
+    # foodnet-cassandra-migration:
+    #     extends:
+    #         file: cassandra-migration.yml
+    #         service: foodnet-cassandra-migration
+    #     environment:
+    #         - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql
+    foodnet-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: foodnet-elasticsearch

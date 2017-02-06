@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="foodnetApp.cfms.detail.title">Cfms</span> {{vm.cfms.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="foodnetApp.cfms.mobile">Mobile</span></dt>
+        <dd>
+            <span>{{vm.cfms.mobile}}</span>
+        </dd>
+        <dt><span data-translate="foodnetApp.cfms.name">Name</span></dt>
+        <dd>
+            <span>{{vm.cfms.name}}</span>
+        </dd>
+        <dt><span data-translate="foodnetApp.cfms.fileloghistory">Fileloghistory</span></dt>
+        <dd>
+            <span>{{vm.cfms.fileloghistory}}</span>
+        </dd>
+        <dt><span data-translate="foodnetApp.cfms.file">File</span></dt>
+        <dd>
+            <span>{{vm.cfms.file}}</span>
+        </dd>
+        <dt><span data-translate="foodnetApp.cfms.locationcurrent">Locationcurrent</span></dt>
+        <dd>
+            <span>{{vm.cfms.locationcurrent}}</span>
+        </dd>
+        <dt><span data-translate="foodnetApp.cfms.locationtarget">Locationtarget</span></dt>
+        <dd>
+            <span>{{vm.cfms.locationtarget}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="cfms-detail.edit({id:vm.cfms.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

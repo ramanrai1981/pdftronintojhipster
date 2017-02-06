@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>
+    </title>
+    <meta http-equiv="Content-Type" content="text/html">
+
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="lib/WebViewer.js"></script>
+    <script src="lib/html5/ControlUtils.js"></script>
+
+    <style>
+#viewer{
+width: 1024px;
+height: 600px;
+}
+</style>
+
+    <script>
+        $(function() {
+        var queryParams = window.ControlUtils.getQueryStringMap(false);
+        var docType = queryParams.getString('doctype', 'xod');
+
+        var viewerElement = document.getElementById("viewer");
+        var myWebViewer = new PDFTron.WebViewer({
+        type: "html5",
+        path: "lib",
+        initialDoc: "kernighan_ritchie." + docType,
+        documentType: docType,
+        documentId: "kernighan_ritchie",
+        config: "config.js",
+        enableAnnotations: true,
+        useDownloader: false,
+        streaming: true
+        }, viewerElement);
+    });
+
+    </script>
+</head>
+
+<body>
+<div id="viewer"></div>
+</body>
+</html>
