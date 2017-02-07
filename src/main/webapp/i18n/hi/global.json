@@ -77,7 +77,7 @@
             "id": "ID"
         },
         "ribbon": {
-            "dev":"Development"
+            "dev": "Development"
         }
     },
     "entity": {
@@ -121,5 +121,8 @@
         "emailexists": "ई-मेल पहले से ही उपयोग में है!",
         "idexists": "एक नई एंटिटी {{ entityName }} पहले से ही एक ID है नहीं कर सकता"
     },
-    "footer": "यह आपके पाद लेख है"
+    "footer": "यह आपके पाद लेख है",
+    "bootswatch": {
+        "themeSelector": "Theme"
+    }
 }
