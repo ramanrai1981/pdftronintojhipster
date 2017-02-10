@@ -38,6 +38,9 @@ public class Cfms implements Serializable {
     @Column(name = "locationtarget")
     private String locationtarget;
 
+    @Column(name="company")
+    private String company;
+
     public Long getId() {
         return id;
     }
@@ -124,6 +127,20 @@ public class Cfms implements Serializable {
         this.locationtarget = locationtarget;
     }
 
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public Cfms company(String company) {
+        this.company = company;
+        return this;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -154,6 +171,7 @@ public class Cfms implements Serializable {
             ", file='" + file + "'" +
             ", locationcurrent='" + locationcurrent + "'" +
             ", locationtarget='" + locationtarget + "'" +
+            ", company='" + company + "'" +
             '}';
     }
 }

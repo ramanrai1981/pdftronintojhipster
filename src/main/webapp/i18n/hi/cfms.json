@@ -23,7 +23,8 @@
             "fileloghistory": "Fileloghistory",
             "file": "File",
             "locationcurrent": "Locationcurrent",
-            "locationtarget": "Locationtarget"
+            "locationtarget": "Locationtarget",
+            "company": "Company"
         }
     }
 }

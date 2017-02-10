@@ -27,29 +27,33 @@
             <column name="mobile" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="name" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="fileloghistory" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="file" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="locationcurrent" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
             <column name="locationtarget" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            
+
+            <column name="company" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
-        
+
     </changeSet>
 </databaseChangeLog>

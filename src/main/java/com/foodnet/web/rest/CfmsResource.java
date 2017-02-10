@@ -5,7 +5,6 @@ import com.foodnet.domain.Cfms;
 import com.foodnet.service.CfmsService;
 import com.foodnet.web.rest.util.HeaderUtil;
 import com.foodnet.web.rest.util.PaginationUtil;
-
 import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,10 +20,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Cfms.
@@ -34,7 +29,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class CfmsResource {
 
     private final Logger log = LoggerFactory.getLogger(CfmsResource.class);
-        
+
     @Inject
     private CfmsService cfmsService;
 
@@ -133,7 +128,7 @@ public class CfmsResource {
      * SEARCH  /_search/cfms?query=:query : search for the cfms corresponding
      * to the query.
      *
-     * @param query the query of the cfms search 
+     * @param query the query of the cfms search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
